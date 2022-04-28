@@ -158,13 +158,13 @@ h4:hover{
     const getDatas = () => {
       
         dispatch(getDataLoading());
-        axios.get(`http://localhost:3001/petdata?_page=${page}&_limit=7`).then(({ data }) => {
+        axios.get(`http://localhost:3001/listing?_page=${page}&_limit=7`).then(({ data }) => {
           dispatch(getDataSuccess(data));
         });
       };
 
       let handleRemove = (e) => {
-        axios.delete(`http://localhost:3001/petdata/${e.id}`)
+        axios.delete(`http://localhost:3001/listing/${e.id}`)
             .then((res) => {
               getDatas()
             
@@ -304,13 +304,13 @@ h4:hover{
                          <td>{item.verified}</td>
                          <td>{item.rating}</td>
                          <td>
-                            <Link to={`/petdata/${item.id}/detail`}>
+                            <Link to={`/listing/${item.id}/detail`}>
                               <button id="btn1">Details</button>
                              </Link>
                              </td>
                          
                              <td>
-                            <Link to={`/petdata/${item.id}/edit`}>
+                            <Link to={`/listing/${item.id}/edit`}>
                               <button id="btn2">Edit</button>
                              </Link>
                              </td>

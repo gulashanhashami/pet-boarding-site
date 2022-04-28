@@ -66,7 +66,7 @@ export const EditDatas=()=>{
   const [newData, setNewData] = useState([]);
     let { id } = useParams();
     useEffect(()=>{
-    axios.get(`http://localhost:3001/petdata/${id}`).then((data)=>{
+    axios.get(`http://localhost:3001/listing/${id}`).then((data)=>{
       // console.log(data)
        setData(data.data);
     })
@@ -99,7 +99,7 @@ export const EditDatas=()=>{
         dispatch(editDataLoading());
         axios({
           method: "patch",
-          url: `http://localhost:3001/petdata/${id}`,
+          url: `http://localhost:3001/listing/${id}`,
           data: {
             id: pdata.id,
             Name: newData.Name || pdata.Name,

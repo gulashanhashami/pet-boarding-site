@@ -72,7 +72,7 @@ const handleChange=(e)=>{
         </div>
         <form onSubmit={(e)=>{
             e.preventDefault();
-            axios.post(`http://localhost:3001/petData`, pdata).then((res)=>{
+            axios.post(`http://localhost:3001/listing`, pdata).then((res)=>{
                setData({
                    Name:"",
                    city:"",

@@ -87,7 +87,7 @@ h4:hover{
   flex-direction: row;
   justify-content: space-between;
   margin:auto ;
-  /* border: 2px solid green; */
+ 
 }
 .pagebtn{
   width: 10vh;
@@ -162,7 +162,7 @@ h4:hover{
           dispatch(getDataSuccess(data));
         });
       };
-// console.log(data)
+
       let handleRemove = (e) => {
         axios.delete(`http://localhost:3001/petdata/${e.id}`)
             .then((res) => {

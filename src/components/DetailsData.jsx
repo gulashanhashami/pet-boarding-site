@@ -51,7 +51,7 @@ export const DetailsData=()=>{
 
     const getdata_pertcul=()=>{
       dispatch(detailsDataLoading());
-      axios.get(`http://localhost:3001/petdata/${id}`).then(({data})=>{
+      axios.get(`http://localhost:3001/listing/${id}`).then(({data})=>{
           dispatch(detailsDataSuccess(data));
         
       })
